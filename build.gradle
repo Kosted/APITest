@@ -1,0 +1,26 @@
+//plugins {
+//    id 'java'
+//}
+apply plugin: 'java'
+
+group 'spider'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+ext {
+    restAssuredVer = "3.2.0"
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "io.rest-assured:scala-support:$restAssuredVer"
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.7'
+    compile 'org.assertj:assertj-core:3.5.2'
+
+} 
